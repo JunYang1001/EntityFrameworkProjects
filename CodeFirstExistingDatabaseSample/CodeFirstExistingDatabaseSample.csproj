@@ -53,19 +53,6 @@
   <ItemGroup>
     <Compile Include="Blog.cs" />
     <Compile Include="BloggingContext.cs" />
-    <Compile Include="Migrations\201912270253025_q.cs" />
-    <Compile Include="Migrations\201912270253025_q.Designer.cs">
-      <DependentUpon>201912270253025_q.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912270254384_w.cs" />
-    <Compile Include="Migrations\201912270254384_w.Designer.cs">
-      <DependentUpon>201912270254384_w.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912270256572_deletew.cs" />
-    <Compile Include="Migrations\201912270256572_deletew.Designer.cs">
-      <DependentUpon>201912270256572_deletew.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,17 +60,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912270253025_q.resx">
-      <DependentUpon>201912270253025_q.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912270254384_w.resx">
-      <DependentUpon>201912270254384_w.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912270256572_deletew.resx">
-      <DependentUpon>201912270256572_deletew.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
