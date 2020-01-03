@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 01/03/2020 11:58:06
+-- Date Created: 01/03/2020 23:42:49
 -- Generated from EDMX file: E:\VS Projects\EntityFrameworkProjects\ModelFirstSample\BloggingModel.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,20 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_BlogPost]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Posts] DROP CONSTRAINT [FK_BlogPost];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Blogs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Blogs];
+GO
+IF OBJECT_ID(N'[dbo].[Posts]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Posts];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -44,6 +53,13 @@ CREATE TABLE [dbo].[Posts] (
 );
 GO
 
+-- Creating table 'Uesrs'
+CREATE TABLE [dbo].[Uesrs] (
+    [Uesrname] nvarchar(50)  NOT NULL,
+    [DisplayName] nvarchar(max)  NOT NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -58,6 +74,12 @@ GO
 ALTER TABLE [dbo].[Posts]
 ADD CONSTRAINT [PK_Posts]
     PRIMARY KEY CLUSTERED ([PostId] ASC);
+GO
+
+-- Creating primary key on [Uesrname] in table 'Uesrs'
+ALTER TABLE [dbo].[Uesrs]
+ADD CONSTRAINT [PK_Uesrs]
+    PRIMARY KEY CLUSTERED ([Uesrname] ASC);
 GO
 
 -- --------------------------------------------------

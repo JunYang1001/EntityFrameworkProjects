@@ -27,5 +27,6 @@ namespace ModelFirstSample
     
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Uesr> Uesrs { get; set; }
     }
 }

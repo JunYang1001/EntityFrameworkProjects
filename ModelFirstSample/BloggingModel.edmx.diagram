@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="BloggingModel.Blog" Width="2.375" PointX="1.75" PointY="1.5" />
         <EntityTypeShape EntityType="BloggingModel.Post" Width="1.5" PointX="6.125" PointY="1.75" />
         <AssociationConnector Association="BloggingModel.BlogPost" />
+        <EntityTypeShape EntityType="BloggingModel.Uesr" Width="1.5" PointX="8.75" PointY="2.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
